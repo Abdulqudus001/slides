@@ -73,6 +73,12 @@
   justify-content: center;
 }
 
+@media screen and (max-width: 700px) {
+  .fullscreen {
+    --slide-height: 500px;
+  }
+}
+
 .fullscreen > div {
   width: 100%;
 }
