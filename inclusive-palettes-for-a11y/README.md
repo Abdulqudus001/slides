@@ -3,5 +3,8 @@
 ### Title
 Inclusive Palletes For Accessibility
 
-### Data
+### Date
 20th July, 2024
+
+### Link to event
+https://gdg.community.dev/events/details/google-gdg-gwagwalada-presents-google-io-extended-2024-gwagwalada/
