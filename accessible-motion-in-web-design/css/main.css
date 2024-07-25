@@ -16,10 +16,10 @@
 .heading h1:before {
   content: ' ';
   display: block;
-  border-bottom: 1px solid #14b5e1;
-  border-top: 1px solid #14b5e1;
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid #fff;
   height: 5px;
-  background-color: #191919;
+  background-color: #282A36;
 }
 
 .subheading h1 {
@@ -39,12 +39,20 @@
 .subheading h1:before {
   content: ' ';
   display: block;
-  border-bottom: 1px solid #14b5e1;
-  background-color: #191919;
+  border-bottom: 1px solid #fff;
+  background-color: #282A36;
 }
 
 .text {
   font-size: 1.5rem;
+}
+
+.btn {
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: #282A36;
 }
 
 .full-image {
@@ -54,15 +62,9 @@
   object-fit: contain;
 }
 
-.chat {
-  background-color: rgba(109, 109, 109, 0.25);
-  border-radius: 10px 0 10px 10px;
-  max-width: 400px;
-}
-
-.chat:last-child {
-  margin-left: auto;
-  border-radius: 0 10px 10px 10px;
+.iframe-container iframe {
+  margin: 0 auto;
+  border-radius: 12px;
 }
 
 .fullscreen {
@@ -127,23 +129,43 @@
   height: 500px;
 }
 
-.shaded {
-  background: repeating-linear-gradient(
-    45deg,
-    #93c5fd,
-    #93c5fd 10px,
-    #8ab7ec 10px,
-    #8ab7ec 20px
-  );
+@keyframes flash {
+  from {
+    background: red;
+  }
+
+  to {
+    background: yellow;
+  }
 }
 
-.shaded2 {
-  background: radial-gradient(
-    circle,
-    #fde047,
-    #fde047 50%,
-    #f0d44b 50%,
-    #f0d44b
-  );
-  background-size: 20px 20px;
+.flash {
+  background-color: red;
+  animation: flash 2s linear infinite;
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  --playState: running
+}
+
+.ball {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  animation: roll .7s linear infinite;
+  animation-play-state: var(--playState, running);
+}
+
+.fragment {
+  font-size: 1.2rem;
 }
