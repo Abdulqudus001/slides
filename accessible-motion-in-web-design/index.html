@@ -21,6 +21,11 @@
 	<div class="reveal">
 		<div class="slides">
 			<section class="fullscreen">
+				<div class="iframe-container">
+					<div id="myVideo"></div>
+				</div>
+			</section>
+			<section class="fullscreen">
 				<div>
 					<div class="heading">
 						<h1>
@@ -152,7 +157,7 @@
 					😎
 				</div>
 				<audio loop src="./videoplayback.mp4" id="rolling"></audio>
-				<button class="btn bg-purple-300" onclick="toggleAnimation()" id="anim-control">Pause Animation</button>
+				<button class="btn bg-purple-300" onclick="toggleAnimation1()" id="anim-control">Pause Animation</button>
 			</section>
 			<section data-markdown>
 				<textarea data-template>
@@ -335,7 +340,7 @@
 			console.log('Played the video');
 		});
 
-		const toggleAnimation = () => {
+		const toggleAnimation1 = () => {
 			const audio = document.querySelector('#rolling');
 			const control = document.querySelector('#anim-control');
 
